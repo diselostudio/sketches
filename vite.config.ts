@@ -2,7 +2,6 @@ import ssr from "vike/plugin";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: './',
   resolve: {
     alias: {
       "#root": `${__dirname}/src`,

@@ -15,5 +15,5 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"]
   },
-  "exclude": ["dist"]
+  "exclude": ["dist", "**/**.js", "**/**.jsx"]
 }

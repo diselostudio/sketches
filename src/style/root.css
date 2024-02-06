@@ -1,0 +1,82 @@
+:root {
+  font-family: "Gill Sans", "Trebuchet MS", system-ui, -apple-system, sans-serif;
+  font-family: var(--type-regular);
+  color-scheme: only light;
+  color: var(--light);
+  background-color: var(--dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+a {
+  cursor: revert;
+  display: inline-block;
+  display: flex;
+  width: 100%;
+}
+
+label {
+  cursor: pointer;
+}
+
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+::-moz-selection {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+i {
+  display: inline-flex;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 1.0416rem + 2.201vw, 6.5rem);
+  line-height: 110%;
+}
+
+.caption {
+  font-size: clamp(1.2rem, 1.1067rem + 0.2392vw, 1.7rem);
+}
+
+.base-text {
+  font-size: clamp(1.4rem, 1.2134rem + 0.4785vw, 2.4rem);
+}

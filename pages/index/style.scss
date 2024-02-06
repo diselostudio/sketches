@@ -1,0 +1,74 @@
+@import "#root/style/vars.css";
+@import "#root/style/root.css";
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 1rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  .intro__brand {
+    width: clamp(4.6rem, 4.3761rem + 0.5742vw, 5.8rem);
+    display: flex;
+  }
+
+  .intro__bar {
+    grid-column: 3 span;
+    background-color: var(--secondary);
+    border-radius: 3rem;
+  }
+
+  .intro__heading {
+    margin-top: 3rem;
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  .intro__socials {
+    margin-top: 1.6rem;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    color: var(--secondary);
+
+    .socials__title {
+      margin-bottom: 0.65rem;
+      color: var(--light);
+    }
+
+    .socials__bucket {
+      display: flex;
+      gap: 0.5rem;
+
+      a {
+        width: auto;
+      }
+    }
+  }
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 5rem;
+  grid-column-start: 2;
+  grid-column-end: 5;
+
+  .collection__item-image {
+    width: 100%;
+  }
+
+  .collection__item-link {
+    display: block;
+  }
+
+  .collection__item-title {
+    font-family: var(--type-display);
+    margin-bottom: 0.5rem;
+  }
+}

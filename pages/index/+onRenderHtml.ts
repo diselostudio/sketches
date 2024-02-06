@@ -7,7 +7,7 @@ const images = import.meta.glob('./../**/**.png', { eager: true, as: 'url', impo
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
 
-  const { Page } = pageContext;
+  const { Page } = pageContext.config;
 
   const routes = pageContext._pageRoutes
     .map(route => route.routeString)
@@ -26,6 +26,35 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>sketch index - diselo.xyz</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#000">
+        <meta name="description" content="a collection of random creative coding visual sketches for the sake of exploring at diselo.xyz">
+        <meta name="keywords" content="Collection, Random, Creative coding, Visual sketches, Exploration, Diselo.xyz">
+        <meta name="image" content="./og.png">
+        <meta property="og:title" content="sketch index - diselo.xyz">
+        <meta property="og:image" content="https://sketchindex.diselo.xyz/og.png">
+        <meta property="og:url" content="https://sketchindex.diselo.xyz">
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="a collection of random creative coding visual sketches for the sake of exploring at diselo.xyz">
+        <meta property="og:image:secure_url" content="https://sketchindex.diselo.xyz/og.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:alt" content="sketch index - diselo.xyz">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:site_name" content="sketchindex.diselo.xyz">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@diseloxyz">
+        <meta name="twitter:creator" content="@diseloxyz">
+        <meta name="twitter:title" content="sketch index - diselo.xyz">
+        <meta name="twitter:description" content="a collection of random creative coding visual sketches for the sake of exploring at diselo.xyz">
+        <meta name="twitter:image" content="https://sketchindex.diselo.xyz/og.png">
+        <meta name="twitter:image:alt" content="sketch index - diselo.xyz">
       </head>
       <body>
         ${dangerouslySkipEscape(pageHtml)}

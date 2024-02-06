@@ -4,7 +4,7 @@
 body {
   background-color: var(--dark);
   color: var(--light);
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 .intro {
@@ -19,8 +19,9 @@ body {
 
   .intro__bar {
     grid-column: 3 span;
-    background-color: var(--secondary);
+    background-color: var(--secondary-shade-1);
     border-radius: 3rem;
+    margin: 0.4rem 0;
   }
 
   .intro__heading {
@@ -33,7 +34,7 @@ body {
     margin-top: 1.6rem;
     grid-column-start: 2;
     grid-column-end: 5;
-    color: var(--secondary);
+    color: var(--secondary-tint-1);
 
     .socials__title {
       margin-bottom: 0.65rem;

@@ -26,7 +26,7 @@ function Page(routes: [{ preview: string, route: string }]) {
         <a href="https://diselo.xyz" target="_blank">${brand}</a>
       </div>
       <div class="intro__bar"></div>
-      <h1 class="intro__heading heading">A collection of random coding visual experiences driven by exploration</h1>
+      <h1 class="intro__heading base-text">A COLLECTION OF RANDOM CODING VISUAL EXPERIENCES DRIVEN BY EXPLORATION</h1>
       <div class="intro__socials base-text">
         <p class="socials__title caption">Socials</p>
         <div class="socials__bucket">

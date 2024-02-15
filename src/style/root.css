@@ -79,9 +79,10 @@ body {
 }
 
 .caption {
-  font-size: clamp(1.2rem, 1.1067rem + 0.2392vw, 1.7rem);
+  font-size: 1.2rem;
 }
 
 .base-text {
-  font-size: clamp(1.4rem, 1.2134rem + 0.4785vw, 2.4rem);
+  font-size: 1.4rem;
+  line-height: 145%;
 }

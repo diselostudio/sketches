@@ -1,0 +1,17 @@
+@mixin only-desktop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin only-large-desktop() {
+  @media screen and (min-width: 1324px) {
+    @content;
+  }
+}
+
+@mixin only-mobile() {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}

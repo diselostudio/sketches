@@ -1,5 +1,6 @@
 import GlslCanvas from "glslCanvas";
 import shader from "./shader.frag?raw";
+import "#root/analytics.client";
 
 (function () {
     const canvas = document.getElementById("experience");

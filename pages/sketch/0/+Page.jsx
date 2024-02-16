@@ -1,12 +1,12 @@
-import image from "./0.png";
+import "./style.scss";
 
 export { Page };
 
-/**
- * An empty page
- * @see {@link https://vike.dev/render-modes#html-only}
- */
 function Page() {
-  // return `<img src="${image}"/>`;
-  return "PAGE";
+  return `
+    <canvas id="experience" class="experience"></canvas>
+    <div class="content base-text">
+      sketch 000, result of a shader workshop with <a href="https://twitter.com/iamelizasj" target="_blank">@iamelizasj</a> at <a href="https://twitter.com/noschoolnevers">@NØschool</a> Nevers, France 2023
+    </div>
+  `;
 }

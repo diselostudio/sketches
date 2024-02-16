@@ -13,4 +13,7 @@ export default defineConfig({
       parallel: 4, partial: false
     }
   })],
+  ssr: {
+    noExternal: ['glslCanvas']
+  }
 });

@@ -1,0 +1,23 @@
+@import "#root/style/vars.css";
+@import "#root/style/root.css";
+@import "#root/style/mediaq";
+
+.error {
+  height: var(--view);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--primary);
+
+  a {
+    display: inline-block;
+    width: auto;
+    text-decoration: underline;
+    margin-left: 1rem;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}

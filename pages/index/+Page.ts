@@ -39,7 +39,7 @@ function Page(routes: [{ preview: string, route: string }]) {
             <span>EMAIL</span>
           </a>
           <span>—</span>
-          <a href="www.linkedin.com/in/elías-pintos-aris-a5b6462b1" target="_blank">
+          <a href="https://www.linkedin.com/in/elias-pintos-aris-diseloxyz" target="_blank">
             <span>LINKEDIN</span>
           </a>
           <span>—</span>

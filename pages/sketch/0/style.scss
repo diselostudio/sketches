@@ -1,3 +1,6 @@
+@import "#root/style/vars.css";
+@import "#root/style/mediaq";
+
 main {
   display: flex;
   height: var(--view);
@@ -25,5 +28,12 @@ main {
 
   a:hover {
     color: var(--secondary);
+  }
+
+  @include only-desktop {
+    .dk-warning {
+      display: none;
+      color: var(--dark-7);
+    }
   }
 }

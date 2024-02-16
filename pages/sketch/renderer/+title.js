@@ -1,1 +1,1 @@
-export default () => 'jajajajaj'
+export default (index) => `sketch ${index} - diselo.xyz`

@@ -103,6 +103,21 @@ body {
         }
       }
     }
+
+    .socials__discord {
+      cursor: ne-resize;
+
+      > span + span {
+        display: none;
+      }
+
+      &:hover > span {
+        display: none;
+        + span {
+          display: block;
+        }
+      }
+    }
   }
 }
 

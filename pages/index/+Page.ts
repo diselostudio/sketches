@@ -1,13 +1,8 @@
 import "./style.scss";
 import brand from "#root/brand/brand.svg?raw";
+import { formatIDFromRoute } from "#root/utils/url";
 
 export { Page };
-
-function formatIDFromRoute(route: string) {
-  const parts = route.split('/');
-  const segment = parts.pop() || parts.pop()
-  return (segment as string).padStart(3, "0");
-}
 
 function Page(routes: [{ preview: string, route: string }]) {
 
@@ -34,7 +29,10 @@ function Page(routes: [{ preview: string, route: string }]) {
             <span>TWITTER</span>
           </a>
           <span>—</span>
-          <span>DISCORD</span>
+          <span class="socials__discord">
+            <span>DISCORD</span>
+            <span>ASK ME</span>
+          </span>
         </div>
         <div class="socials__bucket">
           <a href="mailto:hello@diselo.xyz" target="_blank">

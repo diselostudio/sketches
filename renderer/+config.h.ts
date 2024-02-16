@@ -8,5 +8,8 @@ export default {
     Page: {
       env: { server: true, client: false }, // HTML-only for all pages
     },
+    favicon: {
+      env: { server: true, client: false },
+    }
   },
 };

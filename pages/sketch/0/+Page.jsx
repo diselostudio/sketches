@@ -1,5 +1,4 @@
 import image from "./0.png";
-// import { a } from "#root/x";
 
 export { Page };
 
@@ -11,5 +10,3 @@ function Page() {
   // return `<img src="${image}"/>`;
   return "PAGE";
 }
-
-// const rand = 888888888;

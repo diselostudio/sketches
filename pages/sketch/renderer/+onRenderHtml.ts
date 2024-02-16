@@ -1,6 +1,6 @@
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync } from "vike/types";
-import { formatIDFromRoute } from "#root/utils/url";
+import { formatIDFromRoute, getLastURLparam } from "#root/utils/url";
 
 const images = import.meta.glob('./../**/**.png', { eager: true, as: 'url', import: 'default' })
 
@@ -14,13 +14,19 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
 
   const { Page, config: { title, favicon, description } } = pageContext as any;
 
-  const index = formatIDFromRoute(pageContext.urlOriginal);
+  const index = getLastURLparam(pageContext.urlOriginal);
 
-  const titleString = title(index);
+  const formatindex = formatIDFromRoute(pageContext.urlOriginal);
+
+  const titleString = title(formatindex);
 
   const pageHtml = (Page as () => string)();
 
-  const ogImage = Object.values(images).find(image => image.includes(pageContext.urlOriginal))
+  // NO VALE, TENGO QUE USAR EL KEY
+  const ogImageKey = Object.keys(images).find(image => image.includes(`/${index}/`)) as string
+  const ogImage = images[ogImageKey]
+
+  console.log(ogImage)
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">

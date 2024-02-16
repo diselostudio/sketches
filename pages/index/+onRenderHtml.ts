@@ -3,7 +3,7 @@ import type { OnRenderHtmlAsync } from "vike/types";
 
 export { onRenderHtml };
 
-const images = import.meta.glob('./../**/**.png', { eager: true, as: 'url', import: 'default' })
+const images = import.meta.glob('./../**/**.thumbnail.png', { eager: true, as: 'url', import: 'default' })
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
 

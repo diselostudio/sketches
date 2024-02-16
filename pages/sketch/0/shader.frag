@@ -4,7 +4,6 @@ precision mediump float;
 
 #define PI 3.1415926538
 
-
 uniform vec2 u_resolution;
 uniform vec2 u_mouse;
 uniform float u_time;
@@ -40,7 +39,7 @@ void main() {
       
       float angle = noise(vec2(atan(uv.y * uv.y), cos(u_time * 2.0)));
       
-      color.r = noise(vec2(sin(angle * u_time * n))) * cos(u_time);
+      color.r = noise(vec2(sin(angle * u_time))) * cos(u_time);
       color.g = tan(step(0.2, cos(distance(uv, vec2(0.0) * 10.0 + u_time))));
       color.b = smoothstep(cos(angle + cos(distance(vec2(uv.x), vec2(angle + u_time)))), 0.6, uv.y);
       
@@ -52,7 +51,8 @@ void main() {
       vec3 palette = cosPalette(color.b, brightness, contrast, osc, phase);
       
       color.r = color.r + noise(vec2(palette.g, palette.r));
-      color.g = rand(vec2(0.9, color.r + noise(vec2(palette.g, palette.r))));
+    //   color.g = rand(vec2(0.9, color.r + noise(vec2(palette.g, palette.r))));
+      color.g = noise(vec2(rand(vec2(0.9, 250.0)), 300.0));
       
       gl_FragColor = vec4(color,1.0);
 }

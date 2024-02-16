@@ -132,12 +132,13 @@ body {
   @include only-desktop {
     grid-column-start: 4;
     grid-column-end: 13;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding-right: 3.5rem;
   }
 
   @include only-large-desktop {
     gap: 3.5rem;
+    grid-template-columns: repeat(7, 1fr);
   }
 
   .collection__item-image {

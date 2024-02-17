@@ -10,7 +10,7 @@ main {
 
   @include only-mobile {
     justify-content: flex-start;
-    margin-top: 5vw;
+    padding-top: 5vw;
   }
 }
 

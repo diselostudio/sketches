@@ -62,7 +62,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
           ${dangerouslySkipEscape(pageHtml)}
         </main>
         <section class="main-info base-text">
-          <span>
+          <span class="main-info__title">
             SKETCH <span class="main-info__index">${formatindex}</span>
           </span>
           <span>

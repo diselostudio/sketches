@@ -7,18 +7,32 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @include only-mobile {
+    justify-content: flex-start;
+    margin-top: 5vw;
+  }
 }
 
 .experience {
   aspect-ratio: 3/2;
+  @include only-mobile {
+    width: 90vw !important;
+    aspect-ratio: 4/3;
+  }
 }
 
 .content {
-  color: var(--primary);
+  color: var(--dark-7);
   font-size: 1.4rem;
   margin-top: 3rem;
   width: 50vw;
   text-align: right;
+
+  @include only-mobile {
+    width: 90vw !important;
+    font-size: 1.2rem;
+  }
 
   a {
     text-decoration: underline;

@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -17,6 +17,7 @@
     "vite": "5.0.12"
   },
   "dependencies": {
-    "glslCanvas": "^0.2.6"
+    "glslCanvas": "^0.2.6",
+    "three-162": "npm:three@0.162.0"
   }
 }

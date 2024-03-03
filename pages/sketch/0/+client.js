@@ -11,6 +11,5 @@ import "#root/analytics.client";
     window.addEventListener('resize', function () {
         canvas.style.width = `${window.innerWidth - 40}px`
     })
-
 })();
 

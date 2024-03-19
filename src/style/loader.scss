@@ -1,0 +1,36 @@
+@import "#root/style/vars.css";
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--dark);
+  color: var(--secondary);
+  font-size: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  letter-spacing: 0.5rem;
+  animation: infinitefade 0.2s infinite alternate;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+}
+
+body.is-loading {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.is-loading.is-loading_remove {
+  .loader {
+    opacity: 0;
+  }
+}
+
+@keyframes infinitefade {
+  from {
+    color: var(--dark);
+  }
+  to {
+    color: var(--secondary);
+  }
+}

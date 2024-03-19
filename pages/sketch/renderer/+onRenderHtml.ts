@@ -1,3 +1,4 @@
+import "#root/style/loader.scss";
 import "./style.scss";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync } from "vike/types";
@@ -13,7 +14,7 @@ export { onRenderHtml };
  */
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
 
-  const { Page, config: { title, favicon, description } } = pageContext as any;
+  const { Page, config: { title, favicon, description, loader } } = pageContext as any;
 
   const index = getLastURLparam(pageContext.urlOriginal);
 
@@ -25,6 +26,8 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
 
   const ogImageKey = Object.keys(images).find(image => image.includes(`/${index}/`)) as string
   const ogImage = images[ogImageKey]
+
+  const loaderHtml = loader && `<section id="loader" class="loader">LOADING</section>` || '';
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -57,7 +60,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         <meta name="twitter:image" content="https://sketchindex.diselo.xyz${ogImage}">
         <meta name="twitter:image:alt" content="${titleString}">
       </head>
-      <body>
+      <body class="${loader && 'is-loading'}">
         <main>
           ${dangerouslySkipEscape(pageHtml)}
         </main>
@@ -90,6 +93,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
             </a>
           </span>
         </section>
+        ${dangerouslySkipEscape(loaderHtml)}
       </body>
     </html>`;
 

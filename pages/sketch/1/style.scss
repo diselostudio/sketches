@@ -1,0 +1,14 @@
+@import "#root/style/vars.css";
+@import "#root/style/mediaq";
+
+body {
+  background: var(--dark);
+  // background: linear-gradient(45deg, var(--dark) 100% rgba(14, 27, 94, 1) 25%);
+}
+
+main {
+  height: calc(var(--view));
+  canvas {
+    display: flex;
+  }
+}

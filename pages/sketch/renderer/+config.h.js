@@ -6,5 +6,8 @@ export default {
         description: {
             env: { server: true }
         },
+        loader: {
+            env: { server: true }
+        }
     },
 };

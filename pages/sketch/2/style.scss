@@ -1,0 +1,9 @@
+@import "#root/style/vars.css";
+
+main {
+  display: flex;
+}
+
+.experience {
+  height: var(--view);
+}

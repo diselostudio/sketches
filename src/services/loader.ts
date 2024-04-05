@@ -10,7 +10,7 @@ export function done(callback = () => { }): void {
     setTimeout(() => {
         document.body.classList.remove('is-loading_remove');
         document.body.classList.remove('is-loading');
-        callback();
+        typeof callback === 'function' && callback();
         loader.remove();
     }, 200)
 }

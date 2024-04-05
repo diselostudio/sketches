@@ -1,0 +1,1 @@
+export default "shader exploration exercise built at NØ SCHOOL with @iamelizasj"

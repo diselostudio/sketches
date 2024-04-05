@@ -16,7 +16,11 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
       const imagekey = Object.keys(images).find((image) => image.includes(route)) as string
       return { route, preview: images[imagekey] };
     })
-    .sort()
+    .sort(({ route: routeA }, { route: routeB }) => {
+      const a = parseInt(routeA.split('/').slice([-1]));
+      const b = parseInt(routeB.split('/').slice([-1]));
+      return a - b;
+    })
     .reverse();
 
   const pageHtml = (Page as (pages: any) => string)(routes);

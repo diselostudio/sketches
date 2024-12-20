@@ -17,6 +17,7 @@ import { done } from "#root/services/loader";
 
     for (let shader of shaders) {
         const el = document.createElement('canvas')
+        el.style.width = '100%'
         
         const sandbox = new GlslCanvas(el)
         sandbox.on('load', () => {

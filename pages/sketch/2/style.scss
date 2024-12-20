@@ -1,9 +1,33 @@
 @import "#root/style/vars.css";
+@import "#root/style/mediaq.scss";
 
 main {
   display: flex;
 }
 
-.experience {
-  height: var(--view);
+#grid {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+  padding: 5vw;
+  grid-gap: 8.2vw;
+  box-sizing: border-box;
+  
+  @include only-desktop {
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 2.2vw;
+    padding: 2.4vw;
+    height: var(--view);
+    max-height: var(--view);
+  }
+}
+
+#grid canvas {
+  max-width: 100%;
+  aspect-ratio: 1;
+  
+  @include only-desktop {
+    min-width: 100%;
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
 }

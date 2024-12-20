@@ -1,1 +1,1 @@
-export default "shader exploration exercise built at NØ SCHOOL with @iamelizasj"
+export default "2024 christmas shader challenge"

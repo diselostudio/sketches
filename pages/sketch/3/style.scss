@@ -1,0 +1,25 @@
+@import "#root/style/vars.css";
+@import "#root/style/mediaq.scss";
+
+main {
+  display: flex;
+  height: var(--view);
+}
+
+#grid {
+  display: grid;
+  padding: 5vw;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+  @include only-desktop {
+    padding: 2.4vw;
+  }
+}
+
+#grid canvas {
+  max-width: 100%;
+  aspect-ratio: 1;
+}

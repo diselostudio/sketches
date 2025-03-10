@@ -16,21 +16,10 @@ void main() {
     vec2 baseuv = gl_FragCoord.xy / u_resolution.y;
     vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y;
 
-
-    // float baseuvx = fract(baseuv.x * 8.);
-    baseuv.x = fract(baseuv.x * 9.0) + uv.y * 2.0;
+    baseuv.x = fract(baseuv.x * 9.0) + uv.y * 2.0 - sin(u_time)  * uv.y;
     float uvx = abs(uv.x) + 0.06;
-    // float segment = floor(uvx * 5.) / 5. * 0.5;
 
-
-    // float t = smoothstep(
-    //     uv.y - 1.2,
-    //     uv.y + 0.8,
-        
-    // );
-
-    // float elevation = mod((baseuv.y) - u_time * 0.4, 1.);
-    float elevation = mod(baseuv.y, 1.) - baseuv.x * uvx;
+    float elevation = mod(baseuv.y, 1.) - baseuv.x * uvx - (u_time * 0.35);
 
     vec3 color = palette(
         elevation,
@@ -40,12 +29,6 @@ void main() {
         vec3(0.47, 0.95, 0.91)
     );
 
-    // vec3 color = vec3(elevation);
-
     color = color + vec3(smoothstep(0.96, 1.15,abs(uv.x)));
-
     gl_FragColor = vec4(color, 1.0);
 }
-
-// Different output
-// color = vec3(fract(sin(uv.y + uvx) * 2.0));

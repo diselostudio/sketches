@@ -1,1 +1,1 @@
-export default "Genuary 2025 day 22. Gradients only."
+export default "Diversities"
